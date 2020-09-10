@@ -4,21 +4,25 @@ export const Header = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5px;
+  padding: 20px;
   background-color: #24292e;
   justify-content: center;
-  height: 5vh;
+  width: 100%;
 `;
 
 export const Title = styled.h1`
   color: #ffffff;
 `;
 
-export const Body = styled.div`
+export const Background = styled.div`
   background-color: #faf9f9;
   margin: 0;
-  height: 95vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+`;
+
+export const FormContainer = styled.div`
   padding: 100px;
 `;
