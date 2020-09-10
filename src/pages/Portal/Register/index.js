@@ -1,15 +1,24 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Creators as UserActions } from "../../../store/ducks/users";
+import axios from 'axios';
 
 export default function Register() {
   const [usuario, set_usuario] = useState("");
   const [senha, set_senha] = useState("");
   const [confsenha, set_confsenha] = useState("");
 
-  const users = useSelector((state) => state.users.data);
-  const dispatch = useDispatch();
+  async function register(){
+    try {
+        const response =  await axios.post('https://reqres.in/api/users', {
+            email: usuario,
+            password: senha
+        })
+        console.log(response);
 
+    } catch (error) {
+        console.error(error);
+    }
+}
+  
   return (
     <div className="user">
       <h1>Registro</h1>
@@ -41,14 +50,10 @@ export default function Register() {
         />
       </p>
 
-      <button onClick={() => dispatch(UserActions.addUser(usuario, senha))}>
+      <button onClick={() => register()}>
         Cadastrar
       </button>
-      <ul>
-        {users.map((user, index) => (
-          <li key={index}>{user.email}</li>
-        ))}
-      </ul>
+      
     </div>
   );
 }
