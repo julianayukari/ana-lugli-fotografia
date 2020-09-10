@@ -51,7 +51,7 @@ function RegisterForm() {
         .catch(function (error) {
           setAlertType("danger");
           setShow(true);
-          setErrorMessage("Não foi possível registrar esse usuário!");
+          setErrorMessage(error.message);
         });
     },
   });
@@ -160,8 +160,14 @@ function RegisterForm() {
             {errorMessage !== null ? "Erro" : "Sucesso"}
           </Alert.Heading>
           {errorMessage !== null
-            ? errorMessage
+            ? "Não foi possível concluir o cadastro!"
             : "Usuário cadastrado no sistema!"}
+          {errorMessage !== null && (
+            <>
+              <hr />
+              {errorMessage !== null && errorMessage}
+            </>
+          )}
         </Alert>
       )}
     </>
