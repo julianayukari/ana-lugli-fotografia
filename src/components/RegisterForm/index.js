@@ -22,7 +22,13 @@ function RegisterForm() {
       .required("Este campo é obrigatório")
       .email("Preencha um email válido!"),
     password: yup.string().required("Este campo é obrigatório"),
-    confirmPassword: yup.string().required("Este campo é obrigatório"),
+    confirmPassword: yup
+      .string()
+      .required("Este campo é obrigatório")
+      .oneOf(
+        [yup.ref("password"), null],
+        "As senhas digitadas não são iguais!"
+      ),
   });
 
   const formik = useFormik({
