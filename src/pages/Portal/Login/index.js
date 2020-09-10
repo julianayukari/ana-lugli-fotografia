@@ -1,13 +1,14 @@
 import React from "react";
+import LoginForm from "./components/LoginForm";
+import { Background, Header, Title } from "./styles";
 
-function Login() {
+export default function Register() {
   return (
-    <div className="Login">
-      <header className="Login-header">
-        <p>Login do Portal</p>
-      </header>
-    </div>
+    <Background>
+      <Header>
+        <Title>Login</Title>
+      </Header>
+      <LoginForm />
+    </Background>
   );
 }
-
-export default Login;
