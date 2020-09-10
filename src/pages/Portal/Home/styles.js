@@ -4,10 +4,10 @@ export const Header = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5px;
+  padding: 20px;
   background-color: #24292e;
   justify-content: center;
-  height: 5vh;
+  width: 100%;
 `;
 
 export const Title = styled.h1`
@@ -15,10 +15,41 @@ export const Title = styled.h1`
 `;
 
 export const Body = styled.div`
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  padding: 100px;
+`;
+
+export const Background = styled.div`
   background-color: #faf9f9;
   margin: 0;
-  height: 95vh;
   display: flex;
-  justify-content: center;
-  padding: 100px;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+`;
+
+export const ErrorMessage = styled.p`
+  color: red;
+  font-weight: 200;
+  padding-top: 10px;
+`;
+
+export const SearchContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Input = styled.input`
+  height: 35px;
+`;
+
+export const InputAndButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;

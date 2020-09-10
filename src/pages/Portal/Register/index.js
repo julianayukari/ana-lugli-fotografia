@@ -1,5 +1,5 @@
 import React from "react";
-import RegisterForm from "../../../components/RegisterForm";
+import RegisterForm from "./components/RegisterForm";
 import { Background, Header, Title } from "./styles";
 
 export default function Register() {

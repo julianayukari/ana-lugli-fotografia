@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { useHistory } from "react-router-dom";
 import * as yup from "yup";
-import api from "../../services/api";
+import api from "../../../../../services/register";
 import { FormContainer } from "./styles";
 
 function RegisterForm() {
