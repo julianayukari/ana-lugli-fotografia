@@ -22,7 +22,3 @@ export const Background = styled.div`
   align-items: center;
   height: 100vh;
 `;
-
-export const FormContainer = styled.div`
-  padding: 100px;
-`;

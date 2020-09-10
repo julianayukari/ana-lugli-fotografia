@@ -1,6 +1,6 @@
 import React from "react";
 import RegisterForm from "../../../components/RegisterForm";
-import { Background, FormContainer, Header, Title } from "./styles";
+import { Background, Header, Title } from "./styles";
 
 export default function Register() {
   return (
@@ -8,9 +8,8 @@ export default function Register() {
       <Header>
         <Title>Cadastre-se! </Title>
       </Header>
-      <FormContainer>
-        <RegisterForm />
-      </FormContainer>
+
+      <RegisterForm />
     </Background>
   );
 }
