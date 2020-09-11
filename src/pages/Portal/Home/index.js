@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import api from "../../../services/githubUsers";
 import UsersListItem from "./components/UsersListItem";
+
+
 import {
   Background,
   Body,
@@ -14,6 +17,7 @@ import {
 } from "./styles";
 
 function Home() {
+  const history = useHistory();
   const [users, setUsers] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
@@ -26,6 +30,7 @@ function Home() {
     }).then(function (response) {
       setUsers(response.data.items);
     });
+    
   }
 
   function handleButtonPress() {
@@ -39,13 +44,21 @@ function Home() {
     }
   }
 
+  function logout()
+  {
+    sessionStorage.clear();
+      history.push('/login');
+  }
+  const user = sessionStorage.getItem("email");
+  
+ 
   return (
     <Background>
       <Header>
-        <Title>Projeto 1 - Github Users </Title>
+        <Title>Projeto 1 - Github Users </Title>         
       </Header>
-
       <Body>
+      <h5>Hello {user} !</h5>
         <SearchContainer>
           <p>Digite o nome de algum usuário do GitHub:</p>
           <InputAndButtonContainer>
@@ -65,7 +78,7 @@ function Home() {
             </Button>
           </InputAndButtonContainer>
           <ErrorMessage>{errorMessage}</ErrorMessage>
-        </SearchContainer>
+        </SearchContainer> 
 
         {users.length > 0 && (
           <ul>
@@ -75,6 +88,13 @@ function Home() {
           </ul>
         )}
       </Body>
+      <Button
+              type="primary"
+              style={{ margin:30 }}
+              onClick={() => logout()}
+            >
+              sair
+      </Button> 
     </Background>
   );
 }

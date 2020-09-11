@@ -38,6 +38,9 @@ function LoginForm() {
           password: values.password,
         })
         .then(function (response) {
+          const token = response.data.token;
+          sessionStorage.setItem("token", token, );
+          sessionStorage.setItem("email", values.email);
           history.push("/Portal");
         })
         .catch(function (error) {
@@ -46,6 +49,7 @@ function LoginForm() {
           setErrorMessage(error.message);
         });
     },
+    
   });
 
   return (
