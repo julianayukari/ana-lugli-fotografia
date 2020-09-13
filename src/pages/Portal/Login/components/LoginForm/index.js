@@ -99,7 +99,7 @@ function LoginForm() {
                 isInvalid={!!formik.errors.password}
               />
               <Form.Control.Feedback type="invalid">
-                {formik.errors.confirmPassword}
+                {formik.errors.password}
               </Form.Control.Feedback>
             </Form.Group>
           </div>
