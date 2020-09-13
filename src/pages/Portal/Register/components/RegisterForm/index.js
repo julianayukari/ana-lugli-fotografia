@@ -12,7 +12,7 @@ import { FormContainer } from "./styles";
 function RegisterForm() {
   const history = useHistory();
 
-  const [errorMessage, setErrorMessage] = useState();
+  const [errorMessage, setErrorMessage] = useState(null);
   const [alertType, setAlertType] = useState("");
   const [show, setShow] = useState(false);
 

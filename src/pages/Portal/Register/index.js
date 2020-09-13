@@ -8,7 +8,6 @@ export default function Register() {
       <Header>
         <Title>Cadastre-se! </Title>
       </Header>
-
       <RegisterForm />
     </Background>
   );

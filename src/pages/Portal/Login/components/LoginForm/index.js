@@ -39,8 +39,8 @@ function LoginForm() {
         })
         .then(function (response) {
           const token = response.data.token;
-          sessionStorage.setItem("token", token, );
-          sessionStorage.setItem("email", values.email);
+          localStorage.setItem("token", token);
+          localStorage.setItem("email", values.email);
           history.push("/Portal");
         })
         .catch(function (error) {
@@ -49,7 +49,6 @@ function LoginForm() {
           setErrorMessage(error.message);
         });
     },
-    
   });
 
   return (
@@ -111,8 +110,16 @@ function LoginForm() {
               justifyContent: "space-between",
             }}
           >
-            <Button style={{ width: "100%" }} type="submit">
+            <Button style={{ width: "49%" }} type="submit">
               Entrar
+            </Button>
+            <Button
+              style={{ width: "49%" }}
+              type="button"
+              onClick={() => history.push("Cadastro")}
+              variant="outline-primary"
+            >
+              Cadastre-se
             </Button>
           </div>
         </FormContainer>

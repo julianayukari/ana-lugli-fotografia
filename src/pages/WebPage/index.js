@@ -4,7 +4,7 @@ function WebPage() {
   return (
     <div className="WebPage">
       <header className="WebPage-header">
-        <p>WebPage do Portal</p>
+        <p>WebPage</p>
       </header>
     </div>
   );
