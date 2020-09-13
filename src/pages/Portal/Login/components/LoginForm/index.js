@@ -33,7 +33,7 @@ function LoginForm() {
     onSubmit: async (values) => {
       console.log(values);
       api
-        .post("/ana-lugli-fotografia/Login", {
+        .post("/login", {
           email: values.email,
           password: values.password,
         })
