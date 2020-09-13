@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ana-lugli-fotografia/precache-manifest.a644b1f06b4e94f73ee45cc1533bdc31.js"
+  "/ana-lugli-fotografia/precache-manifest.26c9410b9d8c8fab7fbd704016e67dcd.js"
 );
 
 self.addEventListener('message', (event) => {
