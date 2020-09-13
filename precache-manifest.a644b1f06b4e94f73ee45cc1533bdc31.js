@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5ce3c12ed9351cd1ceff90aa843773a8",
+    "revision": "79c6d3b475f03d3071328a85d12102d3",
     "url": "/ana-lugli-fotografia/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ana-lugli-fotografia/static/js/2.54a96c06.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2060ad93fcd708f51fb9",
-    "url": "/ana-lugli-fotografia/static/js/main.8cf3838d.chunk.js"
+    "revision": "32dcfba8562fd695f380",
+    "url": "/ana-lugli-fotografia/static/js/main.85dbb0b5.chunk.js"
   },
   {
     "revision": "85fd7829f17d6a6bcad9",
