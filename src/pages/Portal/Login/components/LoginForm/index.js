@@ -33,7 +33,7 @@ function LoginForm() {
     onSubmit: async (values) => {
       console.log(values);
       api
-        .post("/login", {
+        .post("/ana-lugli-fotografia/Login", {
           email: values.email,
           password: values.password,
         })
@@ -41,7 +41,7 @@ function LoginForm() {
           const token = response.data.token;
           localStorage.setItem("token", token);
           localStorage.setItem("email", values.email);
-          history.push("/Portal");
+          history.push("/ana-lugli-fotografia/Portal");
         })
         .catch(function (error) {
           setAlertType("danger");
@@ -116,7 +116,7 @@ function LoginForm() {
             <Button
               style={{ width: "49%" }}
               type="button"
-              onClick={() => history.push("Cadastro")}
+              onClick={() => history.push("/ana-lugli-fotografia/Cadastro")}
               variant="outline-primary"
             >
               Cadastre-se

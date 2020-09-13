@@ -7,7 +7,9 @@ function WebPage() {
   return (
     <Container>
       <Title>Webpage ainda em desenvolvimento</Title>
-      <button onClick={() => history.push("/Portal")}>Acessar Portal</button>
+      <button onClick={() => history.push("/ana-lugli-fotografia/Portal")}>
+        Acessar Portal
+      </button>
     </Container>
   );
 }

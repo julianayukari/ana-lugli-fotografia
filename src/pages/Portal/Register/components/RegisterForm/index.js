@@ -139,7 +139,7 @@ function RegisterForm() {
             <Button
               style={{ backgroundColor: "grey", width: "49%", borderWidth: 0 }}
               type="button"
-              onClick={() => history.push("/Login")}
+              onClick={() => history.push("/ana-lugli-fotografia/Login")}
             >
               Voltar ao Login
             </Button>

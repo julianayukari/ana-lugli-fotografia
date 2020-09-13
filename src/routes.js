@@ -10,10 +10,18 @@ function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={WebPage} />
-        <Route exact path="/Login" component={Login} />
-        <Route exact path="/Cadastro" component={Register} />
-        <PrivateRoute exact path="/Portal" component={Home} />
+        <Route exact path="/ana-lugli-fotografia/" component={WebPage} />
+        <Route exact path="/ana-lugli-fotografia/Login" component={Login} />
+        <Route
+          exact
+          path="/ana-lugli-fotografia/Cadastro"
+          component={Register}
+        />
+        <PrivateRoute
+          exact
+          path="/ana-lugli-fotografia/Portal"
+          component={Home}
+        />
       </Switch>
     </BrowserRouter>
   );

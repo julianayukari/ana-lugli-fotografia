@@ -43,7 +43,7 @@ function Home() {
 
   function logout() {
     localStorage.clear();
-    history.push("/login");
+    history.push("/ana-lugli-fotografia/Login");
   }
   const user = localStorage.getItem("email");
 
