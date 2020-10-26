@@ -1,15 +1,9 @@
 import React from "react";
-import { NavBar, NavItem } from "./styles";
+import NavigationBar from "../../../../components/UI/NavigationBar";
 
 function Banner() {
   return (
-    <NavBar>
-      <nav>
-        <li>
-          <NavItem>Acessar Portal</NavItem>
-        </li>
-      </nav>
-    </NavBar>
+    <NavigationBar />
   );
 }
 

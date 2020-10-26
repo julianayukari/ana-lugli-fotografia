@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex: 1;
   height: 100vh;
   align-items: center;
-  justify-content: center;
+
 `;
 
 export const Title = styled.h1`

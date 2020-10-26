@@ -5,6 +5,7 @@ import Home from "./pages/Portal/Home";
 import Login from "./pages/Portal/Login";
 import Register from "./pages/Portal/Register";
 import WebPage from "./pages/WebPage";
+import GlobalStyle from './styles/globalStyles';
 
 function Routes() {
   return (
@@ -23,6 +24,7 @@ function Routes() {
           component={Home}
         />
       </Switch>
+      <GlobalStyle />
     </BrowserRouter>
   );
 }
